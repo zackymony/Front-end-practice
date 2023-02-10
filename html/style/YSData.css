@@ -1,0 +1,9 @@
+
+body {
+    font-family: "YSFont";
+}
+
+@font-face {
+    font-family: YSFont;
+    src:url("../font/zh-cn.ttf") format("truetype");
+}
