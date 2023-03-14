@@ -1,0 +1,35 @@
+#special{
+    background: yellow;
+}
+
+.alert{
+    border: solid 1px gray;
+}
+
+a{
+    color:orange;
+}
+a:hover{
+    text-decoration: none;
+
+}
+a:visited{
+    color:green;
+}
+p:first-child{
+    color:red;
+    font-size: 150%;
+
+}
+tr:nth-child(even){
+    background: #333;
+    color:white
+}
+.alert.stop{
+    background: red;
+}
+
+.alert.go{
+    background: green;
+}
+
