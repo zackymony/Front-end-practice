@@ -1,0 +1,35 @@
+.box1 {
+    border: 5px solid darkblue;
+    width: 50%;
+}
+
+.box2{
+    border: 5px solid darkblue;
+    width: 300px;
+    margin: 10%;
+    padding: 10%;
+}
+.box3{
+    border: 5px solid darkblue;
+    min-height: 150px;
+    width: 200px;
+}
+
+.box4{
+    width: 200px;
+}
+.minibox {
+    width: 50px;
+}
+.width {
+    width: 100%;
+}
+.max {
+    max-width: 100%;
+}
+.box5{
+    border: 5px solid darkblue;
+    width: 20vw;
+    height: 20vh;
+    font-size: 10vh;
+}

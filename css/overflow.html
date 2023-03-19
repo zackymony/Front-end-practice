@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style/overflow.css" rel="stylesheet">
+</head>
+<body>
+<!--一个盒子，在块方向上已经受到height的限制。然后我们已经加了过多的内容，-->
+<!--以至于盒子里面没有空间容纳。内容正在从盒子里面溢出，并让自己把盒子下面-->
+<!--的段落弄得一团糟。-->
+<div class="box">This box has a height and a width.
+  This means that if there
+  is too much content
+  to be displayed within the assigned height, there will
+  be an overflow situation.
+  If overflow is set to hidden then any overflow
+  will not be visible.
+</div>
+
+<p>This content is outside of the box.</p>
+<!--一个单词，位于在内联方向上受到限制的盒子里面。盒子-->
+<!--已经被做得小到无法放置那个单词的地步，于是那个单词-->
+<!--就突破了盒子的限制。-->
+<!--只要有可能，CSS 就不会隐藏你的内容，隐藏引起的数据损失通常会造成困扰。-->
+<br><br><br>
+<div class="word">Overflow</div>
+<br><br><br>
+<div class="hidden_box">This box has a height and a width.
+  This means that if there
+  is too much content
+  to be displayed within the assigned height, there will
+  be an overflow situation.
+  If overflow is set to hidden then any overflow
+  will not be visible.
+</div>
+</body>
+</html>

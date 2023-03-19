@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="style/size_adjustment.css" rel="stylesheet">
+</head>
+<body>
+<div class="box1">
+  I have a percentage width.
+</div>
+<!--对于一个处于另外一个容器当中的盒子，-->
+<!--如果你给予了子盒子一个百分数作为宽度，-->
+<!--那么它指的是父容器宽度的百分数。-->
+<div class="box2">
+  I have margin and padding set to 10% on all sides.
+</div>
+<!--使用百分比作为元素外边距（margin）或填充（padding）的单位时，-->
+<!--值是以包含块的内联尺寸进行计算的，也就是*元素的水平宽度*。在我们的-->
+<!--示例中，所有的外边距或填充都是宽度的 10%。请记住一个事实，当你使-->
+<!--用百分比作为元素外边距或填充的单位时，你将得到一个相同尺寸的外边距或填充。-->
+<!--margin(四个方向：top，right，bottom，left )以及padding(四个方向：top，right，-->
+<!--bottom，left )设置的值为百分比的时候，是相对于最近的父级块级元素的width。-->
+<div class="wrapper">
+    <div class="box3"></div>
+    <div class="box3">These boxes both have a min-height set, this box has content in it which will need more space than the assigned height, and so it grows from the minimum.</div>
+</div>
+
+<div class="wrapper">
+    <div class="box4"><img src="img/star.png" alt="star" class="width"></div>
+    <div class="box4"><img src="img/star.png" alt="star" class="max"></div>
+    <div class="minibox"><img src="img/star.png" alt="star" class="max"></div>
+</div>
+<!--作为示例，如果你设定一个图像的属性为width: 100%，而且它的原始宽度小于容器，图像会被强制拉伸以变大，-->
+<!--看起来像素更加明显。如果它的原始宽度大于容器，它则会溢出。两种情形都不是你想要看到的。-->
+
+<!--如果你使用了max-width: 100%，那么图像可以变得比原始尺寸更小，但是不会大于原始尺寸的 100%。-->
+<div class="box5">
+    A
+</div>
+</body>
+</html>

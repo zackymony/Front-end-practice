@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link href="style/Images, media, and form elements.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+  <div class="box"><img src="img/star.png" alt="star"></div>
+  <div class="box"><img src="img/balloons.jpg" alt="balloons"></div>
+</div>
+<!--一个常用的方法是将一张图片的 max-width 设为 100%。这将会使图片的尺寸小于等于-->
+<!--盒子。这个技术也会对其他替换元素（例如 <video>，或者 <iframe> 起作用。-->
+
+<!--object-fit 属性可以在这里帮助你。当使用 object-fit 时，替换元素可以以多种方式被-->
+<!--调整到合乎盒子的大小。-->
+<!--下面的示例中我们使用了值 cover 来缩小图像，同时维持了图像的原始比例。这样图像就可-->
+<!--以充满盒子。但由于比例保持不变，图像多余的一部分将会被盒子裁切掉。-->
+
+
+<div class="wrapper">
+  <p>cover</p>
+  <div class="box"><img src="img/balloons.jpg" alt="balloons" class="cover"></div>
+  <p>contain</p>
+  <div class="box"><img src="img/balloons.jpg" alt="balloons" class="contain"></div>
+</div>
+<!--对替换元素使用各种 CSS 布局时，你可能会发现他们的表现方式与其他元素有一些细节上的差异。-->
+<!--例如，flex 或者 grid 布局中，默认情况下元素会被拉伸到充满整块区域。但是图像不会被拉伸，-->
+<!--而会对齐到网格区域或者弹性容器的起始处。-->
+<div class="wrapper1">
+  <img src="img/star.png" alt="star" class="st">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+</body>
+</html>

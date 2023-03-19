@@ -1,0 +1,18 @@
+.box {
+    border: 1px solid #333333;
+    width: 200px;
+    height: 100px;
+}
+.word {
+    border: 1px solid #333333;
+    width: 100px;
+    font-size: 250%;
+}
+
+.hidden_box {
+    border: 1px solid #333333;
+    width: 200px;
+    height: 100px;
+    /*overflow: hidden;!*隐藏溢出*!*/
+    overflow: auto;
+}
