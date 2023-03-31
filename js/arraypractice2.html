@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div class="output" style="min-height: 150px;">
+
+    <input type="text"><button>Search</button>
+
+    <ul></ul>
+
+</div>
+<!--在 // number 1 注释下面是一些字符串，每个字符串包含一个产品名称和一个
+冒号分隔的价格。我们希望您将其转换为一个数组，并将其存储在名为 products 的数组中。-->
+<!--与 // number 2 注释同一行的是 for 循环的开头。
+在这行中，我们目前有i <= 0，
+这是一个条件测试，导致 for 循环 立即停止，
+因为它说“当 i 不再小于或等
+ 于 0”时停止，而 i 从 0 开始。
+ 我们希望您使用条件测试来替换它，
+ 当 i 不再小于 products 数组的长度时，该条件测试会停止循环。-->
+<!--就在 // number 3 注释的下方，我们希望您编写一行代码，
+将当前数组项目（名称：价格）分成两个独立的项目，一个只包含该名称，
+一个只包含该价格。如果您不确定如何执行此操作，请参阅有用的字符串方法文章以获得一些帮助，甚至更好的看看本文中的字符串和数组之间的转换部分。-->
+<!--作为上述代码行的一部分，您还需要将价格从字符串转换为数字。如果你不记得如何做，请查看第一个字符串文章。-->
+<!--有一个名为 total 的变量被创建，并在代码的顶部赋值为 0。在循环内（在 // number 4 注释下面），我们希望您添加一行，将当前项目价格添加到循环中的迭代变量，以便在代码结尾处将正确的总数打印到发票上。您可能需要一个赋值运算符来执行此操作。-->
+<!--我们希望您改变 // number 5 注释的行，以便使 itemText 变量等于“当前项目名称 - $ 当前项目价格”，例如“Shoes - $ 23.99”，以此将每个项目的正确信息都印在发票上。这只是简单的字符串连接，您应该对此很熟悉。-->
+</body>
+<script>
+    var list = document.querySelector('.output ul');
+    var searchInput = document.querySelector('.output input');
+    var searchBtn = document.querySelector('.output button');
+
+    list.innerHTML = '';
+
+    var myHistory = [];
+
+    searchBtn.onclick = function() {
+        // 如果搜索框不为空，我们则将搜索词添加到开头
+        if (searchInput.value !== '') {
+            // number 1
+            myHistory.unshift(searchInput.value);
+            // 清空显示的搜索关键词列表，防止显示
+            // 每次输入搜索词都会重新生成显示的内容
+            list.innerHTML = '';
+
+            // 通过循环遍历，显示所有的搜索关键词
+            for (var i = 0; i < myHistory.length; i++) {
+                var itemText = myHistory[i];
+                var listItem = document.createElement('li');
+                listItem.textContent = itemText;
+                list.appendChild(listItem);
+            }
+
+            // 如果数组的长度大于 5，那么便移除旧的搜索关键词
+            if (myHistory.length >= 5) {
+                // number 2
+                myHistory.pop();
+
+            }
+
+            // 清空并聚焦到搜索框，准备下一次的搜索
+            searchInput.value = '';
+            searchInput.focus();
+        }
+    }
+
+</script>
+</html>

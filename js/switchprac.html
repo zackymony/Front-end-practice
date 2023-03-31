@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>实时输出</h2>
+<div class="output" style="height: 300px;">
+  <label for="theme">选择主题：</label>
+  <select id="theme">
+    <option value="white">White</option>
+    <option value="black">Black</option>
+    <option value="purple">Purple</option>
+    <option value="yellow">Yellow</option>
+    <option value="psychedelic">Psychedelic</option>
+  </select>
+
+  <h1>这是我的网站</h1>
+</div>
+</body>
+<script>
+  const select = document.querySelector('select');
+  const html = document.querySelector('.output');
+
+  select.addEventListener('change', () => {
+    const choice = select.value;
+
+    // ADD SWITCH STATEMENT
+    switch (choice) {
+      case "white":
+        update("black", "white");
+        break;
+      case "black":
+        update("white", "black");
+        break;
+      case "purple":
+        update("purple", "white");
+        break;
+      case "yellow":
+        update("yellow", "black");
+        break;
+      case "psychedelic":
+        update("purple", "yellow");
+        break;
+
+    }
+  })
+
+  function update(bgColor, textColor) {
+    html.style.backgroundColor = bgColor;
+    html.style.color = textColor;
+  }
+</script>
+</html>

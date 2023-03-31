@@ -1,0 +1,20 @@
+ol {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+}
+ul {
+    padding-left: 2rem;
+    list-style-type: none;
+}
+
+ul li{
+    padding-left: 2rem;
+    background-image: url(../img/star.svg);
+    background-position: 0 0;
+    background-size: 1.6rem 1.6rem;
+    background-repeat: no-repeat;
+}
+
+ul {
+    list-style-image: url(star.svg);
+}

@@ -1,0 +1,83 @@
+/* General setup */
+html{
+  font-size: 10px;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+  font-family:'afta_serifregular';
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+  font-family: afta_serifregular;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+@font-face {
+  font-family: 'abelregular';
+  src: url('font/abel-regular-webfont.woff2') format('woff2'),
+  url('font/abel-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'afta_serifregular';
+  src: url('font/aftaserifthin-regular-webfont.woff2') format('woff2'),
+  url('font/aftaserifthin-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+body{
+  line-height: 2em;
+  letter-spacing:0.1em ;
+  word-spacing: 0.1em;
+}
+header{
+  text-align: center;
+  letter-spacing:0.5em;
+}
+
+section>h2+p{
+  text-indent: 20px;
+
+}
+a:link{
+
+}
