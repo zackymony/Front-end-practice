@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>OOJS: Task 1</title>
+  <style>
+    p {
+      color: purple;
+      margin: 0.5em 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<section class="preview">
+
+
+
+</section>
+
+</body>
+<script>
+//   class Shape {
+//
+//     name;
+//     sides;
+//     sideLength;
+//
+//     calcPerimeter(){
+//       console.log(`The Shape is perimeter is  ${this.sideLength}`);
+//
+//     }
+//     constructor(name,sideLength,sides) {
+//       this.name=name;
+//       this.sides=sides;
+//       this.sideLength=sideLength;
+//     }
+//
+//
+//   }
+//   var foo = 'bar';
+//   console.log(`Let's meet at the ${foo}`);
+// let square=new Shape("square",5);
+// square.calcPerimeter();
+class Shape {
+
+  name;
+  sides;
+  sideLength;
+
+  constructor(number) {
+    this.sideLength = number;
+
+
+  }
+}
+const calPrototype={
+  calPerimeter(){
+  console.log(`The Shape perimeter is ${this.sideLength}`);}
+}
+Object.assign(Shape.prototype,calPrototype);
+let scoop=new Shape(3);
+scoop.calPerimeter();
+
+
+</script>
+
+</html>
